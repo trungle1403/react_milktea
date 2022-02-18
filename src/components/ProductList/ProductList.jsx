@@ -64,7 +64,8 @@ const ProductList = () => {
                 ))
             }
         </div>
-        <ModalProduct active={modal} data={itemShow} handleHiden={handleHiden}/>
+        {modal ==='active' ?  <ModalProduct active={modal} data={itemShow} handleHiden={handleHiden}/> :  <></>}
+
     </div>
     )
 }

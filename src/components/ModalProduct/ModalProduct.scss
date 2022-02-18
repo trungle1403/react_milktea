@@ -26,8 +26,9 @@
     z-index: 10;
     opacity: 0;
     visibility: hidden;
-    background: #fff;
+    background: var(--bg-color);
     transition: 0.3s ease;
+    padding: 30px;
     &--left {
         width: 200px;
         height: 200px;
@@ -36,4 +37,81 @@
         opacity: 1;
         visibility: visible;
     }
+
+    &--info {
+        display: flex;
+        gap: 0 20px;
+        margin-bottom: 20px;
+    }
+    &--name {
+        color: black;
+        font-size: 20px;
+        text-transform: capitalize;
+        margin-bottom: 20px;
+    }
+    &--price {
+        font-weight: bold;
+        color: var(--primary-color);
+    }
+
+    &--quanlity {
+        display: flex;
+        gap: 0 10px;
+        align-items: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-right: 20px;
+        &__amount {
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            border-radius: 2px;
+            border: 1px solid var(--primary-color);
+        }
+        i {
+            color: #799dd9;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    }
+
+    &--btn-price {
+        padding: 5px 25px;
+        display: inline-block;
+        background: var(--second-color);
+        color: #fff;
+        border-radius: 20px;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    &--topping {
+        span, i {
+            font-size: 17px;
+            margin: 0 20px;
+        }
+        i {
+            font-weight: bold;
+        }
+    }
+    &--content {
+        margin-top: 5px;
+        margin-bottom: 10px;
+        background-color: #fff;
+        box-shadow: 0 0px 12px 0px rgba(0,0,0,0.1);
+        padding: 10px 20px;
+
+        &--radio {
+            margin-bottom: 5px;
+        }
+
+        .custom-radio {
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            display: block;
+            background: var(--primary-color);
+        }
+    }
 }
+
