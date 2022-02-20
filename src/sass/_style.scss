@@ -14,8 +14,18 @@
     margin: 0 auto;
     padding: 0 15px;
 }
+.wf{
+    width: 100%;
+}
+.hf{
+    height: 100%;
+}
 .grid {
     display: grid;
+}
+.grid-2-col {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
 }
 
 .jcb{

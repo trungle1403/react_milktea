@@ -28,7 +28,8 @@
     visibility: hidden;
     background: var(--bg-color);
     transition: 0.3s ease;
-    padding: 30px;
+    padding: 15px;
+    border-radius: 4px;
     &--left {
         width: 200px;
         height: 200px;
@@ -56,17 +57,18 @@
 
     &--quanlity {
         display: flex;
-        gap: 0 10px;
+        gap: 0 5px;
         align-items: center;
         margin-top: 30px;
         margin-bottom: 30px;
         margin-right: 20px;
         &__amount {
-            width: 40px;
-            height: 40px;
-            text-align: center;
-            border-radius: 2px;
-            border: 1px solid var(--primary-color);
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 17px;
         }
         i {
             color: #799dd9;
@@ -86,7 +88,9 @@
     }
 
     &--topping {
-        span, i {
+        height: 270px;
+        overflow-y: scroll;
+        b, i {
             font-size: 17px;
             margin: 0 20px;
         }
@@ -100,17 +104,34 @@
         background-color: #fff;
         box-shadow: 0 0px 12px 0px rgba(0,0,0,0.1);
         padding: 10px 20px;
-
+        font-size: 14px;
         &--radio {
-            margin-bottom: 5px;
+            padding: 10px 0;
+            cursor: pointer;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: start;
+            align-items: center;
+            gap: 0 5px;
+            &:hover .custom-radio{
+                background-color: #999;
+            }
+            .product-checkbox{
+                opacity: 0;
+                visibility: hidden;
+                position: absolute;
+            }
+            .product-checkbox:checked+.custom-radio{
+                background-color: var(--second-color);
+            }
         }
 
         .custom-radio {
-            width: 10px;
-            height: 10px;
+            width: 15px;
+            height: 15px;
             border-radius: 100%;
             display: block;
-            background: var(--primary-color);
+            background-color: rgb(216, 214, 214);
         }
     }
 }

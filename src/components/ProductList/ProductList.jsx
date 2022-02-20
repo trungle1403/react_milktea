@@ -3,6 +3,7 @@ import list_tea from '../../assets/api/list_tea'
 import category from '../../assets/api/category'
 import './ProductList.scss'
 import ModalProduct from '../ModalProduct/ModalProduct'
+import numberWithCommas from '../../utils/numberWithCommas'
 const ProductList = () => {
 
     const initListTea = list_tea.getAllProduct()
@@ -57,7 +58,7 @@ const ProductList = () => {
                         </div>
                         <h3 className="product-name">{item.name}</h3>
                         <div className="product-more">
-                            <div className="product-price">{item.price}</div>
+                            <div className="product-price">{numberWithCommas(item.price)}</div>
                             <i class='bx bx-shopping-bag'></i>
                         </div>
                     </div>
